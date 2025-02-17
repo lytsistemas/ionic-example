@@ -1,0 +1,15 @@
+<!-- Este archivo define la estructura principal de la aplicación Ionic -->
+<ion-app>
+  <!-- ...existing code... -->
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        <!-- Logo de la aplicación y título -->
+        <img (click)="navigateToHome()" src="../../assets/icon/favicon.png" alt="Ionic logo" style="vertical-align: middle; margin-right: 10px;">
+        <h1 style="display: inline; vertical-align: middle;">Ionic - First App</h1>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Contenedor principal para las rutas de la aplicación -->
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,39 @@
+<!-- Contenido principal de la página de inicio -->
+<ion-content [fullscreen]="true">
+  <div class="custom-margin-top">
+    <!-- Título de la página -->
+    <h1>HOME</h1>
+    <!-- Botón para navegar a la página "About" -->
+    <p>Navigate to :</p>
+    <ion-button (click)="navigateToAbout()">About</ion-button>
+  </div>
+  
+  <!-- Formulario para añadir una nueva nota -->
+  <form (submit)="addNote()">
+    <ion-item>
+      <!-- Campo de entrada para el título de la nota -->
+      <ion-label position="floating">Title</ion-label>
+      <ion-input [(ngModel)]="noteTitle" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <!-- Campo de entrada para el contenido de la nota -->
+      <ion-label position="floating">Content</ion-label>
+      <ion-textarea [(ngModel)]="noteContent" name="content"></ion-textarea>
+    </ion-item>
+    <!-- Botón para enviar el formulario y añadir la nota -->
+    <ion-button expand="full" type="submit">Add Note</ion-button>
+  </form>
+  
+  <!-- Lista de notas añadidas -->
+  <ion-list>
+    <!-- Iterar sobre las notas y mostrarlas en la lista -->
+    <ion-item *ngFor="let note of notes; let i = index">
+      <ion-label>
+        <h2>{{ note.title }}</h2>
+        <p>{{ note.content }}</p>
+      </ion-label>
+      <!-- Botón para eliminar una nota específica -->
+      <ion-button fill="clear" color="danger" (click)="deleteNote(i)">Delete</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
