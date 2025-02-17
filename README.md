@@ -32,15 +32,6 @@ Aquí puedes ver algunas capturas de pantalla de la aplicación:
 
 ![Screenshots](screenshots.gif)
 
-## Contribución
-
-Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
-4. Sube tus cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
-5. Abre un Pull Request.
 
 ## Licencia
 
